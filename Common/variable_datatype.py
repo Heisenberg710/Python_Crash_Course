@@ -50,6 +50,7 @@ j = 7
 print(i/j)
 
 #  python将带有小数点的全部称为浮点数
+
 i = 0.4
 j = 0.9
 print(i/j)
@@ -57,4 +58,3 @@ print(i/j)
 age = 23
 message = "\nHappy " + str(age) + "rd birthday!"  # 此处需要将age这个变量强转为str类型
 print(message)
-
