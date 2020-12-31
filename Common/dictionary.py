@@ -62,3 +62,49 @@ print(ob)
 for key, value in ob.items():  # .items()
     print('\nKey:' + key)
     print('\nvalue:' + value)
+
+for key, value in ob.items():
+    print(key)
+
+# 遍历字典------->2、遍历所有的键  在不需要value时，使用方法key（）可以直接获取key
+
+for ob_name in ob.keys():
+    print(ob_name)
+
+# 按顺序遍历字典中的所有键
+
+for ob_name in sorted(ob.keys()):
+    print(ob_name)
+
+# 遍历字典中的所有值
+
+for ob_name in ob.values():
+    print(ob_name)
+
+# 调用集合set（）可让python找出列表中独一无的没有重复的元素，并用这些元素创建一个集合
+
+ob = {
+    '黄翔': 'LongDD',
+    '谢彬': '？？？',
+    '陈尧': 'Zhou',
+    '姜岑': '胖头',
+    '陈志豪': 'Hao',
+    '1': 'LongDD',
+    '2': '？？？',
+    '3': 'Zhou',
+    '4': '胖头',
+    '5': 'Hao',
+}
+print('\n')
+for ob_name in ob.values():
+    print(ob_name)
+print('\n')
+for ob_name in set(ob.values()):
+    print(ob_name)
+
+# 将一系列字典存储在列表中 或是将一系列列表作为值存储在字典中 这称为嵌套
+
+alien_0 = {'color': 'green', 'points': '10'}
+alien_1 = {'color': 'yellow', 'points': '10'}
+alien_2 = {'color': 'red ', 'points': '10'}
+
