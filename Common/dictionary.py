@@ -104,7 +104,37 @@ for ob_name in set(ob.values()):
 
 # 将一系列字典存储在列表中 或是将一系列列表作为值存储在字典中 这称为嵌套
 
-alien_0 = {'color': 'green', 'points': '10'}
+alien_0 = {'color': 'green', 'points': '5'}
 alien_1 = {'color': 'yellow', 'points': '10'}
-alien_2 = {'color': 'red ', 'points': '10'}
+alien_2 = {'color': 'red ', 'points': '15'}
 
+aliens = [alien_0, alien_1, alien_2]
+print('')
+for alien in aliens:
+    print(alien)
+
+aliens = []
+
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+
+print('')
+
+for alien in aliens[:10]:
+    print(alien)
+
+print('总共创建了' + str(len(aliens)) + '个外星人')
+
+for alien in aliens[:30]:
+    if alien['color'] == 'green':
+        alien['color'] = 'red'
+        alien['speed'] = 'fast'
+        alien['points'] = 15
+
+print('')
+
+for alien in aliens:
+    print(alien)
+
+# 
