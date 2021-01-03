@@ -137,4 +137,42 @@ print('')
 for alien in aliens:
     print(alien)
 
-# 
+# 将列表存储在字典中
+favorite_heroes = {
+    '黄翔': ['墨客', '花仙子', '萨尔'],
+    '胖头': ['黑贤', '兔子', 'ds'],
+    '雕哥': ['骷髅王', 'TB', '小娜迦'],
+    '外人': ['？', '？？', '？？？'],
+    '宝哥': ['拉野']
+}
+
+for name, heroes in favorite_heroes.items():
+    if len(heroes) == 1:
+        print('\n' + name + '只有一个绝活就是：' + str(heroes))
+    else:
+        print('\n' + name + '的绝活英雄是：')
+        for hero in heroes:
+            print(hero)
+
+# 在字典中存储字典
+
+ACG = {
+    '命运石之门': {
+        '简介': '《命运石之门》原名：Steins;Gate,故事讲述了一群学生研究和开发可以改变过去的科技。',
+        'URL': 'https://v.qq.com/detail/g/gu5m5d0ccelhqw9.html',
+        '集数': 25
+    },
+    'fate/zero': {
+        '简介': '作为Fate/stay night的前传，Fate/Zero的故事舞台设定在第五次圣杯战争的10年前，即第四次圣杯战争',
+        'URL': 'https://www.bilibili.com/bangumi/play/ep29919?from=search&seid=3510966273635927501',
+        '集数': 25
+    }
+}
+print('\n我喜欢的动漫有：')
+for ACG_name, ACG_info in ACG.items():
+    if ACG_name == '命运石之门':
+        print(ACG_name + '的主要剧情是：' + ACG_info['简介'])
+        print(ACG_name + '的观看地址是：' + ACG_info['URL'])
+    else:
+        print(ACG_name + '的主要剧情是：' + ACG_info['简介'])
+        print(ACG_name + '的观看地址是：' + ACG_info['URL'])
